@@ -1,0 +1,32 @@
+<component name="libraryTable">
+  <library name="api">
+    <CLASSES />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/doc/api" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/doc/osgi" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/doc/tutorial/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/bloat/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4o.cs.optional/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4o.cs/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4o.instrumentation/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4o.instrumentation/test" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4o_osgi/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4o_osgi_test/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4oj.optional/core/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4oj.optional/tools/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4oj.tests/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4oj/core/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4oj/plugins/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4onqopt/core/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4onqopt/test/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4otaj/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4otaj/test" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4otools/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4otools/test" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4ounit.extensions/src" />
+      <root url="jar://$PROJECT_DIR$/src/resources/db4o-8.0-java.zip!/db4o-8.0/src/db4ounit/src" />
+    </SOURCES>
+  </library>
+</component>
