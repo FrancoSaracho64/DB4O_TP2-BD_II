@@ -1,9 +1,9 @@
-package ar.edu.unlu.bdd.utils;
+package ar.edu.unlu.bdd.ejerciciouno.utils;
 
-import ar.edu.unlu.bdd.entidad.Factura;
+import ar.edu.unlu.bdd.ejerciciouno.entidad.Factura;
 import com.db4o.ObjectSet;
 
-import static ar.edu.unlu.bdd.utils.Utildb.getDb;
+import static ar.edu.unlu.bdd.utils.UtilDB.getDb;
 
 public class UtilFactura {
 

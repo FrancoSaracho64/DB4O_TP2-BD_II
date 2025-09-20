@@ -1,10 +1,10 @@
-package ar.edu.unlu.bdd.menu;
+package ar.edu.unlu.bdd.ejerciciouno.menu;
 
-import ar.edu.unlu.bdd.entidad.Cliente;
-import ar.edu.unlu.bdd.entidad.Factura;
+import ar.edu.unlu.bdd.ejerciciouno.entidad.Cliente;
+import ar.edu.unlu.bdd.ejerciciouno.entidad.Factura;
+import ar.edu.unlu.bdd.ejerciciouno.utils.UtilCliente;
+import ar.edu.unlu.bdd.ejerciciouno.utils.UtilFactura;
 import ar.edu.unlu.bdd.utils.CFZValidatorUtils;
-import ar.edu.unlu.bdd.utils.UtilCliente;
-import ar.edu.unlu.bdd.utils.UtilFactura;
 
 public class Menu {
     public Menu() {

@@ -1,4 +1,4 @@
-package ar.edu.unlu.bdd.entidad;
+package ar.edu.unlu.bdd.ejerciciouno.entidad;
 
 public class Cliente {
     private Integer id;

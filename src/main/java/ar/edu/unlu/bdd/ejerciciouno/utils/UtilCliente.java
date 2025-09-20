@@ -1,9 +1,10 @@
-package ar.edu.unlu.bdd.utils;
+package ar.edu.unlu.bdd.ejerciciouno.utils;
 
-import ar.edu.unlu.bdd.entidad.Cliente;
+import ar.edu.unlu.bdd.ejerciciouno.entidad.Cliente;
+import ar.edu.unlu.bdd.utils.UtilDB;
 import com.db4o.ObjectSet;
 
-import static ar.edu.unlu.bdd.utils.Utildb.getDb;
+import static ar.edu.unlu.bdd.utils.UtilDB.getDb;
 
 /**
  * Esta clase encapsula las operaciones para persistir a clientes
@@ -23,8 +24,8 @@ public class UtilCliente {
             if (found != null && found.getId() == nuevo.getId())
                 found.setDescr(nuevo.getDescr());
             else found = nuevo;
-            Utildb.getDb().store(found);
-            Utildb.getDb().commit();
+            UtilDB.getDb().store(found);
+            UtilDB.getDb().commit();
             System.out.println("\nCliente registrado!");
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
