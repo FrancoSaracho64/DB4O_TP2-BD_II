@@ -11,6 +11,12 @@ public class Factura {
         this.importe = importe;
     }
 
+    public Factura(Integer nro) {
+        this.nro = nro;
+        this.id = null;
+        this.importe = null;
+    }
+
     public Factura() {
     }
 
@@ -36,5 +42,10 @@ public class Factura {
 
     public void setImporte(Double importe) {
         this.importe = importe;
+    }
+
+    @Override
+    public String toString(){
+        return "ID= " + nro + ", IMPORTE=" + importe + ", IDCLIENTE=" + id;
     }
 }

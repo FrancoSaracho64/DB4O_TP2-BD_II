@@ -4,6 +4,9 @@ import ar.edu.unlu.bdd.entidad.Cliente;
 import com.db4o.*;
 import com.db4o.cs.*;
 import com.db4o.query.*;
+
+import static ar.edu.unlu.bdd.utils.Utildb.getDb;
+
 /**
  * Esta clase encapsula las operaciones para persistir a clientes
  * dentro de b.d. db4o
@@ -14,49 +17,16 @@ import com.db4o.query.*;
  * @version 1.0
  */
 public class UtilCliente {
-    private static ObjectContainer db = null;
-    private static ObjectServer server = null;
 
-    public static void initServer() {
-        try{
-            server = Db4oClientServer.openServer("mibase.db",8080);
-            server.grantAccess("usuario","contrasenia");
-            System.out.println("Server db4o running...");
-            System.out.println("at localhost,port 8080,database mibase.db ...");
-            System.out.println("Press any key to stop");
-            System.in.read();
-        } catch(Exception ex) {
-            System.err.println(ex.getMessage());
-        } finally {
-            server.close();
-        }
-    }
-    public static void initEmbebido() {
-        db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),"mibase.db");
-    }
-    public static void initClient() {
-        try{
-            db = Db4oClientServer.openClient("localhost", 8080, "usuario", "contrasenia");
-        } catch(Exception ex) {
-            System.err.println(ex.getMessage());
-        }
-    }
-    public static ObjectContainer getDb() { return db; }
-    public static void close() {
-        System.out.println("close!");
-        db.close();
-    }
-    public static void fin() {
-        System.exit(0);
-    }
+
     public static void insert(Cliente nuevo) {
         try {
             Cliente found = findFirst(new Cliente(nuevo.getId()));
             if ( found != null && found.getId() == nuevo.getId() )
                 found.setDescr(nuevo.getDescr());
             else found = nuevo;
-            UtilCliente.getDb().store(found);
-            UtilCliente.getDb().commit();
+            Utildb.getDb().store(found);
+            Utildb.getDb().commit();
         } catch(Exception ex) {
             System.err.println(ex.getMessage());
         }

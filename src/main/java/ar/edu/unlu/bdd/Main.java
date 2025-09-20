@@ -2,6 +2,7 @@ package ar.edu.unlu.bdd;
 
 import ar.edu.unlu.bdd.entidad.Cliente;
 import ar.edu.unlu.bdd.utils.UtilCliente;
+import ar.edu.unlu.bdd.utils.Utildb;
 import com.db4o.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -9,8 +10,8 @@ import com.db4o.*;
 public class Main {
     public static void main(String[] args) {
 
-        UtilCliente.initEmbebido();
-        ObjectContainer db = UtilCliente.getDb();
+        Utildb.initEmbebido();
+        ObjectContainer db = Utildb.getDb();
         try {
 
             //Util.insert(new Cliente(1, "JCROMERO"));
