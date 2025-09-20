@@ -5,6 +5,11 @@ public class Cliente {
     private String descr;
 
     public Cliente() {
+        this(0, null);
+    }
+
+    public Cliente(int id) {
+        this(id, null);
     }
 
     public Cliente(Integer id, String descr) {
