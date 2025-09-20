@@ -6,8 +6,8 @@ import ar.edu.unlu.bdd.utils.CFZValidatorUtils;
 import ar.edu.unlu.bdd.utils.UtilCliente;
 import ar.edu.unlu.bdd.utils.UtilFactura;
 
-public class menu {
-    public menu() {
+public class Menu {
+    public Menu() {
         int opc;
         do {
             System.out.println("\n----------------------------------------------");
