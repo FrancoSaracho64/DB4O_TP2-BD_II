@@ -43,7 +43,7 @@ public class menu {
             System.out.println("Seleccione la acción que desea realziar sobre la tabla:");
             System.out.println("1 - Alta");
             System.out.println("2 - Consulta");
-            System.out.println("2 - Borrar");
+            System.out.println("3 - Borrar");
             System.out.println("4 - Volver");
 
             opc = CFZValidatorUtils.solicitarNumeroPorTeclado("Ingrese su opcion: ");
