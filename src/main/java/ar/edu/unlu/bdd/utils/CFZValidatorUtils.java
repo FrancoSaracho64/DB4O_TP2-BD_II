@@ -114,4 +114,43 @@ public class CFZValidatorUtils {
 
     }
 
+    /**
+     * Solicita un número decimal (double) por teclado mostrando un mensaje personalizado.
+     * Reintenta hasta que el usuario ingrese un número válido.
+     *
+     * @param mensaje mensaje que se mostrará al usuario
+     * @return número ingresado por el usuario
+     */
+    public static Double solicitarDoublePorTeclado(String mensaje) {
+        Double numero = null;
+        boolean valido = false;
+
+        do {
+            System.out.print(mensaje);
+            String linea = teclado.nextLine().trim(); // Leemos la línea completa y eliminamos espacios
+
+            if (linea.isEmpty()) { // Si solo presionó Enter
+                System.out.println("\n***********************************************");
+                System.out.println("La entrada no puede estar vacía. Intente otra vez.");
+                System.out.println("***********************************************\n");
+                continue;
+            }
+
+            try {
+                numero = Double.parseDouble(linea.replace(",", "."));
+                // permitimos que si el usuario pone coma decimal, se convierta a punto
+                valido = true;
+            } catch (NumberFormatException ex) {
+                System.out.println("\n***********************************************");
+                System.out.println("Debe introducir un número decimal válido. Intente otra vez.");
+                System.out.println("***********************************************\n");
+            }
+        } while (!valido);
+
+        return numero;
+    }
+
+    public static Double solicitarDoublePorTeclado() {
+        return solicitarDoublePorTeclado("Ingrese un número decimal: ");
+    }
 }
