@@ -13,11 +13,8 @@ public class MainEjercicioTres {
 
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();
-            //em.createNativeQuery("SELECT 1 FROM RDB$DATABASE").getSingleResult(); // consulta mínima a Firebird
-            em.getTransaction().commit();
 
-
-            new Menu();
+            new Menu(emf);
         } finally {
             System.out.println("Programa finalizado.");
         }

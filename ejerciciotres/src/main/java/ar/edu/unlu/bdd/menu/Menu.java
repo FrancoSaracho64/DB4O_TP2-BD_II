@@ -2,8 +2,11 @@ package ar.edu.unlu.bdd.menu;
 
 import ar.edu.unlu.bdd.utils.CFZValidatorUtils;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+
 public class Menu {
-    public Menu() {
+    public Menu(EntityManagerFactory emf) {
         int opc;
         do {
             System.out.println("\n----------------------------------------------");
