@@ -1,10 +1,7 @@
 package ar.edu.unlu.bdd.controlador;
 
 import ar.edu.unlu.bdd.entidad.Producto;
-import ar.edu.unlu.bdd.entidad.Sucursal;
 import ar.edu.unlu.bdd.vista.VistaProducto;
-import org.hibernate.Session;
-import org.hibernate.query.Query;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
