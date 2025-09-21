@@ -25,8 +25,16 @@ public class Empleado {
         this.apellido = apellido;
     }
 
-    public Empleado() {
+    public Empleado(int dni) {
+        this.dni = dni;
     }
+
+    public Empleado(int dni, String  nombre, String apellido){
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
 
     public int getDni() {
         return dni;

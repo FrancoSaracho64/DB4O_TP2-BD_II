@@ -22,11 +22,11 @@
 
             <!-- Conexión remota a la VM -->
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:firebirdsql://10.101.0.12:3050/tp2_ej3_182783_182818_182882.fdb"/>
+                      value="jdbc:firebirdsql://10.101.0.12:3050//var/lib/firebird/3.0/data/tp2_ej3_182783_182818_182882.fdb"/>
 
-            <property name="javax.persistence.jdbc.user" value="SYSDBA"/>
+            <property name="javax.persistence.jdbc.user" value="sysdba"/>
             <property name="javax.persistence.jdbc.password" value="Master11077"/>
-            <property name="hibernate.connection.roleName" value="SYSDB"/>
+            <property name="hibernate.connection.roleName" value="sysdb"/>
 
             <!-- Opciones de Hibernate -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.FirebirdDialect"/>

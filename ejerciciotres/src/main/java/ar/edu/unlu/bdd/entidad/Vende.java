@@ -9,7 +9,6 @@ public class Vende {
     @Column(name = "CODIGO", nullable = false)
     private int codigo;
 
-    @Id
     @Column(name = "NOMBRE", nullable = false, length = 100)
     private String nombre;
 
