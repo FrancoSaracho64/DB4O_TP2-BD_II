@@ -4,24 +4,41 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ar.edu.unlu.bdd</groupId>
+    <groupId>ar.edu.unlu</groupId>
     <artifactId>DB40_TP2-BD_II</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <db4o.lib.path>C:\Users\HP\Documents\Proyectos\DB4O_TP2-BD_II\libs\db4o-8.0.249.16098-all-java5.jar
+        </db4o.lib.path>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.db4o</groupId>
-            <artifactId>db4o</artifactId>
-            <version>8.1</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/libs/db4o-8.0.249.16098-all-java5.jar</systemPath>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>ejerciciouno</module>
+        <module>ejerciciodos</module>
+        <module>ejerciciotres</module>
+    </modules>
+
+    <!-- Dependency management para versiones centralizadas -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.db4o</groupId>
+                <artifactId>db4o</artifactId>
+                <version>8.1</version>
+                <scope>system</scope>
+                <systemPath>${db4o.lib.path}</systemPath>
+            </dependency>
+            <dependency>
+                <groupId>org.firebirdsql.jdbc</groupId>
+                <artifactId>jaybird</artifactId>
+                <version>5.0.5.java8</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
