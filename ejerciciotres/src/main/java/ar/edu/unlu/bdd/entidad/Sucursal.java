@@ -1,6 +1,6 @@
 package ar.edu.unlu.bdd.entidad;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "TBL_SUCURSAL")
