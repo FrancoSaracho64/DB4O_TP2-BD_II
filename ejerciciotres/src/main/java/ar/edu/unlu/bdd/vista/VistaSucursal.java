@@ -55,7 +55,6 @@ public class VistaSucursal {
             else System.out.println("La dirección no puede estar vacía y debe tener menos de 100 caracteres.");
         }
         controladorSucursal.alta(nombre, direccion);
-
     }
 
     private void inputBaja(ControladorSucursal controladorPiloto) {
@@ -82,9 +81,9 @@ public class VistaSucursal {
 
         // Entrada NACIONALIDAD
         while (true) {
-            direccion = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese la Nacionalidad del Piloto: ");
+            direccion = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese la dirección: ");
             if (!direccion.isEmpty() && direccion.length() <= 100) break;
-            else System.out.println("La nacionalidad no puede estar vacía y debe tener menos de 100 caracteres.");
+            else System.out.println("La dirección no puede estar vacía y debe tener menos de 100 caracteres.");
         }
 
         controladorPiloto.modificacion(nombre, direccion);
@@ -95,7 +94,7 @@ public class VistaSucursal {
         String nombre;
         // Entrada nombre
         while (true) {
-            nombre = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese el nombre de la sucursal ('todas' para ver todas) ");
+            nombre = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese el nombre de la sucursal: ");
             if (!nombre.isEmpty() && nombre.length() <= 100) break;
             else System.out.println("El nombre no puede estar vacío y debe tener menos de 100 caracteres.");
         }
