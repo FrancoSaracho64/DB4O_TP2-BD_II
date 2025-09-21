@@ -9,8 +9,8 @@ public class Empleado {
     @Column(name = "DNI", nullable = false)
     private int dni;
 
-    @Column(name = "DESCRIPCION", nullable = false, length = 100)
-    private String descripcion;
+    @Column(name = "NOMBRE_SUCURSAL", nullable = false, length = 100)
+    private String sucursal;
 
     @Column(name = "NOMBRE", nullable = false, length = 100)
     private String nombre;
@@ -20,7 +20,7 @@ public class Empleado {
 
     public Empleado(int dni, String descripcion, String nombre, String apellido) {
         this.dni = dni;
-        this.descripcion = descripcion;
+        this.sucursal = descripcion;
         this.nombre = nombre;
         this.apellido = apellido;
     }
@@ -45,11 +45,11 @@ public class Empleado {
     }
 
     public String getDescripcion() {
-        return descripcion;
+        return sucursal;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescripcion(String sucursal) {
+        this.sucursal = sucursal;
     }
 
     public String getNombre() {
