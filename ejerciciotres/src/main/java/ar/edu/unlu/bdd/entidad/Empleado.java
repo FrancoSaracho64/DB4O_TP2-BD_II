@@ -9,18 +9,18 @@ public class Empleado {
     @Column(name = "DNI", nullable = false)
     private int dni;
 
-    @Column(name = "NOMBRE_SUCURSAL", nullable = false, length = 100)
-    private String sucursal;
-
     @Column(name = "NOMBRE", nullable = false, length = 100)
     private String nombre;
 
     @Column(name = "APELLIDO", nullable = false, length = 100)
     private String apellido;
 
-    public Empleado(int dni, String descripcion, String nombre, String apellido) {
+    @Column(name = "NOMBRE_SUCURSAL", nullable = false, length = 100)
+    private String sucursal;
+
+    public Empleado(int dni, String nombre, String apellido, String sucursal) {
         this.dni = dni;
-        this.sucursal = descripcion;
+        this.sucursal = sucursal;
         this.nombre = nombre;
         this.apellido = apellido;
     }
