@@ -18,4 +18,46 @@ public class Vende {
 
     @Column(name = "PRECIO", nullable = false)
     private Double precio;
+
+    public Vende(int codigo, String nombre, int stock, Double precio) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.stock = stock;
+        this.precio = precio;
+    }
+
+    public Vende() {
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public Double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Double precio) {
+        this.precio = precio;
+    }
 }
