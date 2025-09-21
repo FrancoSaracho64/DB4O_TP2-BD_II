@@ -7,5 +7,6 @@ public class ControladorVenta {
     }
 
     public void iniciarVista() {
+
     }
 }
