@@ -95,7 +95,7 @@ public class VistaSucursal {
         String nombre;
         // Entrada nombre
         while (true) {
-            nombre = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese el nombre de la sucursal: ");
+            nombre = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese el nombre de la sucursal ('todas' para ver todas) ");
             if (!nombre.isEmpty() && nombre.length() <= 100) break;
             else System.out.println("El nombre no puede estar vacío y debe tener menos de 100 caracteres.");
         }

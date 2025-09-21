@@ -5,6 +5,7 @@ import ar.edu.unlu.bdd.vista.VistaSucursal;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import java.util.List;
 
 public class ControladorSucursal {
     private final EntityManagerFactory entityManagerFactory;
@@ -53,13 +54,29 @@ public class ControladorSucursal {
 
     public void consulta(String nombre) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
-        try {
-            Sucursal sucursal = entityManager.find(Sucursal.class, nombre);
 
-            if (sucursal == null) {
-                System.out.println("No se encontró ninguna sucursal con el nombre: " + nombre);
+        try {
+            if ("todas".equalsIgnoreCase(nombre)) {
+                // Traer todas las sucursales
+                List<Sucursal> sucursales = entityManager
+                        .createQuery("SELECT s FROM Sucursal s", Sucursal.class)
+                        .getResultList();
+
+                if (sucursales.isEmpty()) {
+                    System.out.println("No hay sucursales registradas.");
+                } else {
+                    for (Sucursal s : sucursales) {
+                        System.out.println(s);
+                    }
+                }
             } else {
-                System.out.println(sucursal);
+                // Buscar por PK
+                Sucursal sucursal = entityManager.find(Sucursal.class, nombre);
+                if (sucursal == null) {
+                    System.out.println("No se encontró ninguna sucursal con el nombre: " + nombre);
+                } else {
+                    System.out.println(sucursal);
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
