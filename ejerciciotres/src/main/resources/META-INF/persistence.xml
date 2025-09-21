@@ -2,7 +2,7 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
-             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
 
     <persistence-unit name="firebirdPU" transaction-type="RESOURCE_LOCAL">
@@ -19,8 +19,11 @@
         <properties>
             <!-- Driver JDBC de Firebird -->
             <property name="javax.persistence.jdbc.driver" value="org.firebirdsql.jdbc.FBDriver"/>
+
+            <!-- Conexión remota a la VM (solo nombre de archivo, no ruta absoluta) -->
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:firebirdsql://10.101.0.12:3050/var/lib/firebird/3.0/data/tp2_ej3_182783_182818_182882.fdb?encoding=UTF8"/>
+                      value="jdbc:firebirdsql://10.101.0.12:3050/tp2_ej3_182783_182818_182882.fdb?encoding=UTF8"/>
+
             <property name="javax.persistence.jdbc.user" value="SYSDBA"/>
             <property name="javax.persistence.jdbc.password" value="Master11077"/>
 
