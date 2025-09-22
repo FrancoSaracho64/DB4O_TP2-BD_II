@@ -3,7 +3,7 @@ package ar.edu.unlu.bdd.menu;
 import ar.edu.unlu.bdd.controlador.ControladorEmpleado;
 import ar.edu.unlu.bdd.controlador.ControladorProducto;
 import ar.edu.unlu.bdd.controlador.ControladorSucursal;
-import ar.edu.unlu.bdd.controlador.ControladorVenta;
+import ar.edu.unlu.bdd.controlador.ControladorVende;
 import ar.edu.unlu.bdd.utils.CFZValidatorUtils;
 
 import javax.persistence.EntityManagerFactory;
@@ -46,7 +46,7 @@ public class Menu {
     }
 
     private void operarProductosAVender(EntityManagerFactory emf) {
-        ControladorVenta controller = new ControladorVenta(emf);
+        ControladorVende controller = new ControladorVende(emf);
         controller.iniciarVista();
     }
 
