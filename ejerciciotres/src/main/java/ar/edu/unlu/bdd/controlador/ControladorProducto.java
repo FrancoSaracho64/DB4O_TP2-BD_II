@@ -34,9 +34,7 @@ public class ControladorProducto {
         try {
             entityManager.persist(p);
             entityTransaction.commit();
-            System.out.println("Producto dado de alta correctamente.\n");
-            p.toString();
-            System.out.println("\n");
+            System.out.println("\nProducto dado de alta correctamente [" + p.getDescripcion() + "].");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -56,9 +54,9 @@ public class ControladorProducto {
             if (p != null) {
                 entityManager.remove(p);
                 entityTransaction.commit();
-                System.out.println("Producto dado de baja correctamente:\n" + p);
+                System.out.println("\nProducto dado de baja correctamente:\n\n" + p);
             } else {
-                System.out.println("No se encontró un producto con el código: " + codigo);
+                System.out.println("\nNo se encontró un producto con el código: " + codigo);
                 entityTransaction.rollback();
             }
         } catch (Exception e) {
@@ -83,9 +81,9 @@ public class ControladorProducto {
                 entityManager.merge(p);
 
                 entityTransaction.commit();
-                System.out.println("Producto modificado correctamente:\n" + p);
+                System.out.println("\nProducto modificado correctamente:\n\n" + p);
             } else {
-                System.out.println("No se encontró un producto con el código: " + codigo);
+                System.out.println("\nNo se encontró un producto con el código: " + codigo);
                 entityTransaction.rollback();
             }
         } catch (Exception e) {
@@ -108,19 +106,20 @@ public class ControladorProducto {
                         .getResultList();
 
                 if (productos.isEmpty()) {
-                    System.out.println("No hay productos creados.");
+                    System.out.println("\nNo hay productos creados.");
                 } else {
+                    System.out.println("\n");
                     for (Producto p : productos) {
-                        p.toString();
+                        System.out.println(p.toString() + "\n");
                     }
                 }
             } else {
                 // Buscar por PK
                 Producto producto = entityManager.find(Producto.class, codigo);
                 if (producto == null) {
-                    System.out.println("No se encontró un producto con el código: " + codigo);
+                    System.out.println("\nNo se encontró un producto con el código: " + codigo);
                 } else {
-                    producto.toString();
+                    System.out.println(producto + "\n");
                 }
             }
         } catch (Exception e) {
