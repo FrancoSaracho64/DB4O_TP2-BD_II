@@ -15,26 +15,38 @@ public class VistaEmpleado {
     }
 
     private void gestionarOpcion(int opcion){
+        int dni = 0;
+        String nom, ape, sucursal;
+
         switch (opcion){
             case 1:
-                int dni = CFZValidatorUtils.solicitarNumeroPorTeclado("Ingrese DNI: ");
-                String nom = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese Nombre: ");
-                String ape = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese Apellido: ");
-                String sucursal = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese sucursal: ");
+                dni = CFZValidatorUtils.solicitarNumeroPorTeclado("Ingrese DNI: ");
+                nom = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese Nombre: ");
+                ape = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese Apellido: ");
+                sucursal = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese sucursal: ");
 
                 controlador.alta(dni, nom, ape, sucursal);
                 break;
 
             case 2:
+                dni = CFZValidatorUtils.solicitarNumeroPorTeclado("Ingrese DNI: ");
 
+                controlador.baja(dni);
                 break;
 
             case 3:
+                dni = CFZValidatorUtils.solicitarNumeroPorTeclado("Ingrese DNI: ");
+                nom = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese nuevo nombre: ");
+                ape = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese nuevo apellido: ");
+                sucursal = CFZValidatorUtils.solicitarEntradaPorTeclado("Ingrese nuevo sucursal: ");
 
+                controlador.modificar(dni, nom, ape, sucursal);
                 break;
 
             case 4:
+                dni = CFZValidatorUtils.solicitarNumeroPorTeclado("Ingrese DNI (0 = TODOS): ");
 
+                controlador.consulta(dni);
                 break;
 
             case 5: break;

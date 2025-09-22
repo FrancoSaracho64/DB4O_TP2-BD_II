@@ -29,10 +29,8 @@ public class Empleado {
         this.dni = dni;
     }
 
-    public Empleado(int dni, String  nombre, String apellido){
-        this.dni = dni;
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Empleado(){
+
     }
 
 
@@ -44,11 +42,11 @@ public class Empleado {
         this.dni = dni;
     }
 
-    public String getDescripcion() {
+    public String getSucursal() {
         return sucursal;
     }
 
-    public void setDescripcion(String sucursal) {
+    public void setSucursal(String sucursal) {
         this.sucursal = sucursal;
     }
 
@@ -67,4 +65,11 @@ public class Empleado {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+
+    @Override
+    public String toString(){
+        return "DNI=" + dni + ", NOMBRE= " + nombre + ", APELLIDO= " + apellido + ", SUCURSAL=" + sucursal;
+    }
+
 }
