@@ -108,7 +108,7 @@ public class VistaProducto {
         // Entrada CODIGO
         while (true) {
             codigo = CFZValidatorUtils.solicitarNumeroPorTeclado("Ingrese Código del Producto: ");
-            if (codigo > 0) break;
+            if (codigo >= 0) break;
             else System.out.println("El Código debe ser positivo.");
         }
 
