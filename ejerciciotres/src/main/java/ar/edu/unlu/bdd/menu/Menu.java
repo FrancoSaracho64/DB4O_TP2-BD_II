@@ -42,7 +42,7 @@ public class Menu {
                 default:
                     System.out.println("Opción incorrecta.");
             }
-        } while (opc != 3);
+        } while (opc != 5);
     }
 
     private void operarProductosAVender(EntityManagerFactory emf) {

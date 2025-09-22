@@ -31,7 +31,10 @@ public class VistaSucursal {
                     System.out.println("Saliendo...");
                     break;
                 }
-                default: System.out.println("Opción incorrecta.");
+                default: {
+                    System.out.println("Opción incorrecta.");
+                    break;
+                }
             }
         } while (opc != 5);
     }
